@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DCE Lesson Planner</title>
+  <link rel="icon" href="assets/ico.svg">
+  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Planner lekcji zgodny z DCE Planner (Rada Europy): filtrowanie efektów uczenia się wg wieku i domeny.">
+</head>
+<body>
+  <header>
+    <img src="assets/ico.svg" alt="Ikona DCE">
+    <h1>DCE Lesson Planner — Kompas Cyfrowego Obywatela</h1>
+  </header>
+
+  <div class="container">
+    <div class="filters">
+      <select id="domain">
+        <option value="">Domena (wszystkie)</option>
+      </select>
+      <select id="age">
+        <option value="">Grupa wiekowa (wszystkie)</option>
+      </select>
+      <input id="q" type="search" placeholder="Szukaj po słowach kluczowych…">
+    </div>
+
+    <div class="meta">
+      <div>Wyniki: <strong id="count">0</strong></div>
+      <div>
+        <button id="clear">Wyczyść filtry</button>
+        <a href="data/dce_planner_database.json" target="_blank">
+          <button>Podgląd bazy</button>
+        </a>
+      </div>
+    </div>
+
+    <div id="grid" class="grid" aria-live="polite"></div>
+  </div>
+
+  <footer>
+    Oparte na materiałach Rady Europy (DCE). Sprawdź warunki wykorzystania. Kod MIT.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
